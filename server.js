@@ -5,6 +5,8 @@ const app = express();
 const PORT = 8080;
 
 let notes = [];
+// Counter for note IDs
+let count = 0;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -20,10 +22,9 @@ app.get("/api/notes", (req, res) => res.json(notes));
 
 app.post("/api/notes", (req, res) => {
     let note = req.body;
-    // ID for note
-    let noteID = notes.length;
+    count++;
 
-    note.id = noteID + 1;
+    note.id = count;
     notes.push(note);
 
     res.json(notes);
