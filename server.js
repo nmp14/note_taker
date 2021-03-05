@@ -18,5 +18,16 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, 'notes.html'))
 // API paths
 app.get("/api/notes", (req, res) => res.json(notes));
 
+app.post("/api/notes", (req, res) => {
+    let note = req.body;
+    // ID for note
+    let noteID = notes.length;
+
+    note.id = noteID + 1;
+    notes.push(note);
+
+    res.json(notes);
+});
+
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
