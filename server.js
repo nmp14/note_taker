@@ -30,5 +30,41 @@ app.post("/api/notes", (req, res) => {
     res.json(notes);
 });
 
+app.delete('/api/notes/:id', (req, res) => {
+    let selected = req.params.id;
+    let found = false;
+
+    console.log(selected);
+    for (const note of notes) {
+        if (parseInt(selected) === note.id) {
+            found = true;
+
+            notes.splice(notes.indexOf(note), 1);
+
+            res.json(notes);
+        }
+    }
+
+    if (!found) {
+        res.status(404).send("cant find that note");
+    }
+});
+
+app.get("/api/notes/:id", (req, res) => {
+    const selected = req.params.id;
+    let found = false;
+
+    for (const note of notes) {
+        if (parseInt(selected) === note.id) {
+            found = true;
+            res.json(note);
+        }
+    }
+
+    if (!found) {
+        res.status(404).send("cant find that note");
+    }
+});
+
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
