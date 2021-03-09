@@ -34,7 +34,6 @@ app.delete('/api/notes/:id', (req, res) => {
     let selected = req.params.id;
     let found = false;
 
-    console.log(selected);
     for (const note of notes) {
         if (parseInt(selected) === note.id) {
             found = true;
