@@ -18,7 +18,7 @@ A simple app for saving notes! Just enter a title and some descriptive text for 
 none
 
 ## Usage
-node index.js
+npm start - to begin the server.
 
 ## Contribution Guidelines
 
