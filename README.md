@@ -14,6 +14,8 @@
 ## Description
 A simple app for saving notes! Just enter a title and some descriptive text for your note and hit the save icon on the top right! That's all and you have a saved note. To access old notes, just click their name on the left hand side. Create a new note by pressing the pencil icon on the top right.
 
+Demo Video: https://www.youtube.com/watch?v=_OaPfUxZpOc
+
 ## Installation Instructions
 none
 
