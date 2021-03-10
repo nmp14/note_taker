@@ -20,18 +20,13 @@ none
 ## Usage
 npm start - to begin the server.
 
-## Contribution Guidelines
-
-
-## Test Instructions
-
-
 ## License Information
 ### No license
-
-None
 
 ## Questions
 If you have further questions you can contact us at nmp14fsu@gmail.com.
 
 Github: nmp14
+
+![Home page](assets/photos/home.png)
+![Note taker](assets/photos/notes.png)
